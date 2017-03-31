@@ -1,0 +1,110 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* 1em@48em(768px) から 2em@120em(1920px) に増加 */
+@media (min-width: 48rem) {
+  :root {
+    font-size: calc(100% + ((1vw - .48rem) * 1.389));
+    /* .48rem = viewportWidthMinimum /100 */
+    /* 1.389rem = 100 * fontSizeDifference / viewportWidthDifference */
+  }
+}
+
+/* 120rem(1920px)を超えたらフォントサイズの増加は停止 */
+@media (min-width: 120em) {
+  :root {
+    font-size: 2rem;
+  }
+}
+
+body {
+  width: 100%;
+  background-color: #faf5ee;
+  line-height: 1.6;
+  color: #334466;
+  // font-family: '游ゴシック',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Yu Gothic', YuGothic, Verdana, Meiryo, 'M+ 1p', sans-serif;
+  -webkit-font-feature-settings: 'palt' 1; // for Android 4.4
+  font-feature-settings: 'palt' 1;
+}
+
+@media (max-width: 48rem) {
+  body {
+    font-family: 'Noto Sans Japanese', sans-serif;
+    font-weight: 300;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  body {
+    font-family: 'heisei-maru-gothic-std', Verdana, Meiryo, sans-serif;
+  }
+}
+
+
+header,
+main,
+footer {
+  margin: 0 5%;
+}
+
+header {
+  margin-top: 6rem;
+}
+
+main {
+  margin-top: 6rem;
+}
+
+footer {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  text-align: center;
+  font-size: .5em;
+  font-weight: normal;
+  letter-spacing: .08em;
+}
+
+main article section {
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.link ul {
+  list-style: circle;
+  margin-left: 1.2rem;
+}
+
+.link ul li {
+  margin-top: 1rem;
+}
+
+.link ul li a {
+  color: #2098D1;
+}
+
+.link ul li a:hover {
+  text-decoration: none;
+}
